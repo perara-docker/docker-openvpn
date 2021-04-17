@@ -15,7 +15,7 @@ iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 
 # Needed permissions - especially for stupid stuff like CRL
 chown -R nobody:nogroup /etc/openvpn
-chmod -R 700 /etc/openvpn
+chmod -R 777 /etc/openvpn
 
 # Ensure routing is on
 sysctl -w net.ipv4.ip_forward=1
